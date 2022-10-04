@@ -1,0 +1,28 @@
+
+  #table{
+    border: 2px;
+    text-align: center;   
+    font-size: 2em;
+    font-family:cursive;
+    width: 100%;
+    font-weight:bold;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    justify-content: center;
+    border-radius: 30px;
+
+
+} 
+#table td{
+  border: 2px solid black;
+  border-radius: 30px;
+  background: orange;
+ 
+}
+#table td:hover {
+  background-color:lightgoldenrodyellow;
+  border-radius: 30px;
+}
+#bineco{
+  float: right  ;
+}
+
