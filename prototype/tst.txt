@@ -1,0 +1,55 @@
+risque:
+1.indisponibilite de ressource informatique:les personnes qui non pas de materiel electronique permettant d'utilser l'application
+2.la temperature externe : en cas de tempete de neige cela peut conduit a un decalage de l'arriver des camion qui collecte la poubelle 
+3.ne pas trouver un consomateur :les dechets vont s'accumuler et les dechet seront pas traiter
+4.l'utilisateur n'enregistre pas bien le code Qr 
+5.niveau de remplissage de la poubelle est a 100% mais il reste de poubelle a jete
+
+besoin materiels:
+	parties a informatiser:
+	gestion des resident 
+	gestion des consomatteur
+	gestion des bacs (recyclage,ordure,compostage)
+	
+	materiels necessaires:
+	ordinateur personnels 
+	disponibilite d'un cellulaire ou ordinateur chez l'utilisateurs de l'application benco
+	bac de recyclage, composte , et ordur 
+	camion pour collecter la poubelle
+	acces a l'internet
+
+	solution de stockage :
+	
+
+
+
+contraintes:
+	physique:chaque bac est lie a une adress
+	conceptuelles: un consomateur doit etre deja inscrit comme resident  
+
+proposition:
+
+besion fonctionnels :( Fonctionnalité du logiciel à offrir traduit par des cas d'utilisation et scénarios)
+-inscrire les donnees personnel pour sincrire comme resident
+-inscrire les donnees personnel pour sincrire comme consommateur
+-entrer le code Qr pour enregistrer les bac de poubelles
+
+
+besoin non fonctionnels:(5 caractéristiques du logiciel affectant l'expérience utilisateur (avec justification))
+
+1. le systeme ne prend pas des duplication de donnees : le code Qr ne peut pas etre enregistrer deux fois 
+
+2. comporte vis a vis du temps: la ville met en contacte les resident de l'heure de cueillette de la poubelle 
+
+3. le systeme consiste la presence des donnees specifique : chaque utilisateur doit enregistrer le code Qr des bacs pour effectuer les taches suivantes: Afficher l'état des bacs, Voir l'état de traitement des déchets.
+
+4.maintenance : Le système est suffisamment intuitif pour faciliter l'opération au client: les utilisateurs peuvent changer leurs donnees personelles par exemple en cas d'un demenagement.
+
+5.Le système est suffisamment intuitif pour faciliter l'opération des utilsateur : la possibilite de revenir au menu principale sans quitter l'application.
+ 
+
+
+
+
+
+

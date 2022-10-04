@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UFT-8">
+    <title>devoir1 ift2255</title> 
+    
+
+</head>
+  <body style="background-color:blanchedalmond;">
+      <h2>
+          veuiller remplir les champs suivant afin de pouvoir acceder a l'application
+          <span style="color:greenyellow">Bineco</span> et enrigistrer vos donnees:
+      </h2>
+      <hr>
+      <br>
+      
+    <form action ="application.html" style="font-size: 20px;">
+        <div>
+        <label for ="fprenom">prenom: </label> 
+        <input type="text" id ="fprenom" name ="fprenom" placeholder ="veuillez inscrire votre prenom" required> </input>
+        <label for ="fname">Nom: </label> 
+        <input type="text" id ="fname" name ="fname" placeholder ="veuillez inscrire votre nom" required> </input>
+        </div>
+    <br>
+    <div>
+        <label for ="fnaissance">date de naissance: </label> 
+        <input type="date" id ="fnaissance" name ="fnaissance"  required> </input>
+    </div>
+    <br>
+    <div> 
+        <label for ="fprovince">province : </label> 
+        <input type="text" id ="fprovince" name ="fprovince" placeholder ="Quebec" required> </input>
+        <label for ="fville">ville : </label> 
+        <input type="text" id ="fville" name ="fville" placeholder ="saint-leonard" required> </input>
+    </div>
+    <br>
+    <div>    
+        <label for ="fpost">code postal: : </label> 
+        <input type="text" id ="fpost" name ="fpost" placeholder ="H1H 1H1" required> </input>
+        <label for ="fnum">numero de maison : </label> 
+        <input type="text" id ="fnum" name ="fnum" placeholder ="1010" required> </input>
+        <label for ="fapp">appartement : </label> 
+        <input type="text" id ="fapp" name ="fapp" placeholder ="1010" > </input>
+       
+    </div>
+    <br>
+    <div>
+        <label for ="femail">address courriel: </label> 
+        <input type="email" id ="femail" name ="femail" placeholder ="abcd@hotmail.com" required> </input>
+        <label for ="fphone">numero de telephone: </label> 
+        <input type="tel" id ="fphone" name ="fphone" placeholder ="000-000-0000" required> </input>
+    </div>
+    <br>
+    <div>
+        <label for ="ftype">Type de dechets traites : </label> 
+        <select id ="ftype" name ="ftype" placeholder ="type"  required >  
+            <option></option>
+            <option>composte</option>
+            <option>recyclage</option>
+            <option>ordure</option>
+        </select>
+    
+    </div>
+    <br>
+    <div>
+        <label for ="capacity">Capacite de traitement: </label> 
+        <input type="number" id ="capacity" name ="capacity" placeholder ="0" required> </input>
+
+    </div>
+    <br>
+    <div >
+        <label>Activites d'exploitation </label> 
+        
+
+    </div>
+    <div>
+        <textarea name="paragraph_text" cols="50" rows="10"></textarea>
+    </div>
+    <br>
+    <br>
+    
+    <div> <input type="reset">
+    <input type="submit"></div>
+    </form>
+    <div style="float: right;">
+        <a href="application.html">
+        <img src ="retour.png" height="100" alt ="retour au menu principal" title="retour au menu principal" style="transform:rotate(180deg);" ></a>
+    </div>
+    <div style="text-align: center;">
+    <img src ="binec.png" height="200"id ="bineco" >
+    </div>
+    
+    
+    
+  </body>
+</html>
