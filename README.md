@@ -1,10 +1,10 @@
 # 2255_devoir
-ce projet consiste a implementé l'application Bineco qui permet:
-  Faire le suivi des recyclables
-  Faire le suivi des déchets organiques (résidus alimentaires)
-  Visualiser l'efficacité des activités de recyclages et compostages
-  Signaler un problème à la ville
-  Trouver un consommateur de déchets organiques ou matières recyclables
+ce projet consiste a implementé l'application Bineco qui permet:<br />
+  Faire le suivi des recyclables<br />
+  Faire le suivi des déchets organiques (résidus alimentaires)<br />
+  Visualiser l'efficacité des activités de recyclages et compostages<br />
+  Signaler un problème à la ville<br />
+  Trouver un consommateur de déchets organiques ou matières recyclables<br />
 
 pour cela nous avons fourni un rapport qui prend en mesure de décrire les points suivantes:
   Cadre du projet
