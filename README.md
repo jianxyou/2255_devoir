@@ -1,5 +1,5 @@
 # 2255_devoir 11-oct-2022 <br />
-#Bineco <br />
+Bineco<br />
 ce projet consiste a implementé l'application Bineco qui permet:<br />
   Faire le suivi des recyclables<br />
   Faire le suivi des déchets organiques (résidus alimentaires)<br />
@@ -20,4 +20,4 @@ Accéder premièrement au fichier : <br />
 Encors une fois la fléche bleu permet de ce deconnecter (dans le menu principal). <br />
  3. Maintenant vous pouvez selectionner le choix que vous voulez voir exemple choisir consommateur et vous allez vous rendre dans l'appercu de la liste de consommateur inscrit avec un filtrage par ville. <br />
  4. La flèche bleu en bas à droite permet de retourner au menu princpal. <br />
- 
+
