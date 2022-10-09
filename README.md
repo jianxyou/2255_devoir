@@ -1,4 +1,5 @@
-# 2255_devoir 11-oct-2022
+# 2255_devoir 11-oct-2022 <br />
+#Bineco
 ce projet consiste a implementé l'application Bineco qui permet:<br />
   Faire le suivi des recyclables<br />
   Faire le suivi des déchets organiques (résidus alimentaires)<br />
