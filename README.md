@@ -15,7 +15,7 @@ pour cela nous avons fourni un rapport qui prend en mesure de décrire les point
 <br />
 Vous trouvez dans le répertoir prototype des vues sur l'outil bineco:<br />
 Accéder premièrement au fichier : <br />
-  1.Connet.html : dans ce lien vous allez pouvoir vous inscrire en tant que résident ou consommateur (les deux on des vues) par exemple : une fois que vous avez cliquer sur resident il suffit de remplir le formulaire et de cliquer sur se connecte; Si vous avez changé d'avis vous pouvez toujours retourner en arrière avec la fléche en bas à droite.<br />
+  1.Connet.html : dans ce lien vous allez pouvoir vous inscrire en tant que résident ou consommateur (les deux on des vues) par exemple : une fois que vous avez cliquer sur resident il suffit de remplir le formulaire et de cliquer sur se connecte; Si vous avez changé d'avis vous pouvez toujours retourner en arrière avec la fléche en bas à droite.<br /> avec la connection en tant que consommateur vous allez pas pouvoir vous connectez au menu principale seleument un ecran avec succes apparaitera mais vous pouvez retourner aux options de connection avec la fleche bleu <br />
   2.Une fois connecte vous allez vous rendre sur le menu principale (attention seleument 4 choix ont un apperçu à date : signaler un probleme, choisir consommateur, voir l'état des bacs et activités que je maintiens).<br /> 
 Encors une fois la fléche bleu permet de ce deconnecter (dans le menu principal). <br />
  3. Maintenant vous pouvez selectionner le choix que vous voulez voir exemple choisir consommateur et vous allez vous rendre dans l'appercu de la liste de consommateur inscrit avec un filtrage par ville. <br />
