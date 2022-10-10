@@ -1,0 +1,37 @@
+#table{
+    border: 2px;
+    text-align: center;   
+    font-size: 1em;
+    font-family:cursive;
+    width: 100%;
+    font-weight:bold;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); 
+    justify-content: center;
+    background: pink;
+    border: 2px solid black;
+    border-color:black;
+
+
+
+} 
+#boite {
+    width:150px;
+  }
+#table th{
+
+    border: 2px dotted black;
+    background: rgb(235, 126, 173);
+  
+  }
+#table td {
+
+
+    border: 2px dotted black;
+  
+  }
+
+#table tr:hover {
+
+  background:rgb(210, 246, 250);
+
+}
