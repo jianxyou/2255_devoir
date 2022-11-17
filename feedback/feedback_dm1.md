@@ -92,5 +92,4 @@ Bon prototype.
 
 ## Git
 
-- Bon usage de Git
-- Tous les membres doivent participer
+Tres bon usage de Git
