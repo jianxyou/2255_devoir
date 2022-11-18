@@ -7,15 +7,31 @@ public class Menu{
 
     }
 
+    public Boolean display_premier_page(){
 
+
+        Scanner scan  = new Scanner(System.in);
+        System.out.println("Bienvenue a bineco" );
+        System.out.println("Do u have a count ou not, entrer  o / n ");
+
+        String haha = scan.next();
+        if (haha == "o"){
+            return false;
+        }
+
+        else if (haha == "n"){
+            return true;
+        }
+
+        else return false;
+    }
 
     public void display_main_page(){
 
     }
 
 
-    public void display_service_page(){
-
+    public void display_create_account_page(){
     }
 
 
@@ -51,8 +67,7 @@ public class Menu{
         System.out.println("6, signaler une probleme：" );
         System.out.println("7, voir les activites maintenus" );
         System.out.println("8, voir l'etats de traitements" );
-        System.out.println("9, plz enter ur account_number：" );
-        System.out.println("10, plz enter ur account_number：" );
+        System.out.println("9, exit");
 
     }
 

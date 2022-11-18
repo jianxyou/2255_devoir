@@ -1,3 +1,4 @@
+
 import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -15,76 +16,71 @@ public class AccountController {
     private ArrayList<Consommateur> consommateurs;
 
 
-    public AccountController(){
+    public AccountController() {
         this.accounts = new ArrayList<Compte>();
         this.residents = new ArrayList<Resident>();
         this.consommateurs = new ArrayList<Consommateur>();
 
     }
 
-    public Boolean verify_password(String account ,String password){
+    public Boolean verify_password(String account, String password) {
 
         //找到相应的账户，并看对应的密码；
-        for (Compte acc : accounts){
-            if (acc.getAccount() == account){
+        for (Compte acc : accounts) {
+            if (acc.getAccount() == account) {
+                System.out.println("tamade");
+                this.logged_account = acc;
 
-                logged_account = acc;
-
-                if (acc.getPassword() == password){
+                if (acc.getPassword() == password) {
                     return true;
-                }
-                else return false;
+                } else return false;
             }
         }
 
         return true;
     }
 
-    public void create_new_consommateur(String account,String password){
-        Consommateur consommateur = new Consommateur(account,password);
+    public void create_new_consommateur(String account, String password) {
+        Consommateur consommateur = new Consommateur(account, password);
         consommateurs.add(consommateur);
+        accounts.add(consommateur);
     }
 
 
-    public void create_new_resident(String account,String password){
-        Resident resident = new Resident(account,password);
+    public void create_new_resident(String account, String password) {
+        Resident resident = new Resident(account, password);
         residents.add(resident);
+        accounts.add(resident);
+
     }
 
 
-    public Boolean est_consommateur(String account){
+    public Boolean est_consommateur(String account) {
 
         //找到相应的账户，并看对应的密码；
         return true;
 
     }
 
-    public void enregistrer_un_bac(){
-        System.out.println("Quel type de bac");
-        System.out.println("1,haha");
-        System.out.println("2 lala");
-        System.out.println("3 wtf");
 
-        Scanner scan = new Scanner(System.in);
-        String type_de_bac = scan.next();
-
-        System.out.println("Donnez votre CodeQr s'il vous plait");
-        System.out.println("!!! note, plz enter \"haha\" parce que c'est pour testDonnez votre CodeQr s'il vous plait");
-        String codeQR = scan.next();
-
-        Bac bacc = new Bac(type_de_bac,codeQR);
-        Resident resident = (Resident) logged_account;
-        resident.ajout_un_bac(bacc);
-
-        System.out.println("reussi");
+    public Compte get_account(String account_number) {
+        for (Compte acc : accounts) {
+            if (acc.getAccount() == account_number) {
+                return acc;
+            }
+        }
+        return null;
     }
 
+    public int account_exist(String account_number) {
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getAccount() == account_number) {
+                return i;
+            }
+        }
 
-    public void supprimer_un_bac(){
+        return -1;
+
 
     }
-
-
-
-
 }
