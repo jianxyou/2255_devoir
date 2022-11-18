@@ -1,142 +1,141 @@
+
+
+
+import java.awt.desktop.SystemSleepEvent;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class Bineco {
-    private String address;
-    private Compte_manager compte_manager;
-    private Metrique_manager metrique_manager;
-
-    public Bineco{
-        this.compte_manager = new Compte_manager();
-    }
+public class bineco {
 
 
-    private void afficher_consommateurs() {
+    private Compte logged_compte;
 
-    }
+    public static void main(String[] args) {
 
-    public void login(String account, String password) {
 
-        Boolean succeed = compte_manager.verify_password(account,password);
-        if (succeed) {
-            System.out.println("login failed");
+        Scanner scan = new Scanner(System.in);
+
+        //ArrayList<Resident> residents = new ArrayList<Resident>();
+        //ArrayList<Consommateur> consommateurs = new ArrayList<Consommateur>(10);
+        AccountController account_controller = new AccountController();
+        BacController bac_controller = new BacController();
+
+        Menu menu = new Menu();
+
+
+        Boolean avoir_un_compte = menu.display_premier_page();
+
+        if (!avoir_un_compte){
+            menu.display_create_account_page();
+            System.out.println(" what's your account number you want to create");
+            String account = scan.next();
+            System.out.println(" what's your password");
+            String password = scan.next();
+            account_controller.create_new_resident(account,password);
+
+            System.out.println("Bravo");
+            System.out.println("===================================================================");
+
         }
 
-        else {
-            System.out.println("login succeeded");
+
+        System.out.println(" enter your account number");
+        String account = scan.next();
+        System.out.println(" enter your account number");
+        String password = scan.next();
+
+
+        Boolean success = account_controller.verify_password(account,password);
+        if (success){
+            menu.login_succeed();
         }
-    }
 
-    public void enregistre_un_bac(String nom_de_resident, Bac bac) {
+        else menu.login_failed();
 
-    }
 
-    public void supprimier_un_bac(String nom_du_resident, Bac bac) {
+        Compte current_account = account_controller.get_account(account);
+        bac_controller.set_resident(current_account);
 
-        ArrayList<Resident> residents = compte_manager.getResidents();
 
-        for (Resident resident : residents) {
-            if (resident.getNom() == nom_du_resident) {
-                resident.remove_un_bac(bac);
+
+        if (success){
+            menu.login_succeed();
+        }
+
+
+        System.out.println("===========================================");
+        if (account_controller.est_consommateur("333")){
+            System.out.println("vous etes un resident, qu'est ce que vous voulez faire today");
+        }
+
+
+
+
+
+        while(true){
+
+            System.out.println("===========================================");
+            menu.display_resident_options();
+
+            System.out.println("===========================================");
+            System.out.println("entrez votre option");
+            String option_choisi = scan.next();
+
+
+            Boolean exit = false;
+            switch (option_choisi) {
+                case "1":
+                    bac_controller.enregistrer_un_bac();
+                    break;
+                case "2":
+                    bac_controller.supprimer_un_bac();
+                    break;
+                case "9":
+                    exit = true;
+            }
+
+
+            if (exit){
+                break;
             }
 
         }
-    }
-
-    public void enregistre_un_bac(String nom_du_resident, Bac bac) {
-
-        ArrayList<Resident> residents = compte_manager.getResidents();
-
-        for (Resident resident : residents) {
-            if (resident.getNom() == nom_du_resident) {
-                resident.ajout_un_bac(bac);
-            }
 
 
-        }
-    }
+        //account_controller.verify_password()
 
-    public void afficher_etats_des_bacs(String nom_du_resident) {
 
-        ArrayList<Resident> residents = compte_manager.getResidents();
 
-        for (Resident resident : residents) {
-            if (resident.getNom() == nom_du_resident) {
-                ArrayList<Bac> bacs_de_ce_resident = resident.getBacs();
-            }
-        }
 
-        for (Bac bac : bacs_de_ce_resident) {
-        }
-    }
+// faire linscription
+        //account_controller.create_resident(888,999);
+        //System.out.println(account_controller.get_residents());
 
-    public void trouver_un_consommateur() {
 
-        System.out.println("voici tous les consommateurs");
-        ArrayList<Consommateur> consommateurs = compte_manager.getConsommateurs();
 
-        for (Consommateur consommateur : consommateurs) {
-            System.out.println(consommateur.getNom());
+        //valider le compte
+        //Boolean login = account_controller.verify_password(366,888);
+        //menu.print_msg(login);
 
-        }
+
+        //enregistrer un bac
+
+        //bac_controller.enregistre_un_bac(resident,Bac bac)
+
+
+        //trouver un consommateur
+        //account_controlleur.affiche_consommateur;
+
+
+        // voir les activites maintenues
+        //activity.controller.affiche_les_activities;
+
+
+        //supprime un bac
+
+
+
 
     }
-
-    public void consulter_les_metriques() {
-
-        System.out.println("voici tous les metriques");
-        ArrayList<Metrique> metriques = compte_manager.getConsommateurs();
-
-        for (Consommateur consommateur : consommateurs) {
-            System.out.println(consommateur.getNom());
-
-        }
-    }
-
-
-
-    public void inscirt_comme_resident (String account_number, String password, String nom){
-        compte_manager.cree_un_resident(account_number,password,nom);
-    }
-
-    public Consommateur afficher_consommateur(){
-        for _ in consommateur
-    }
-
-
-    public void note_un_consommteur(int note, String nom){
-        compte_manager.update_consommateur_note(nom,note);
-
-    }
-
-    public void afficher_consommateur(){
-
-        ArrayList<Consommateur> consommateurs = compte_manager.getConsommateurs();
-        for (Consommateur conso : consommateurs){
-            System
-        }
-    }
-
-
-    public void faire_inscription()
-    }
-
-
-    public void login_succeed(){
-
-    }
-
-
-    public void login_failed(){
-
-    }
-
-    public boolean verifier_compte(){
-
-    }
-
-
-
-
-
 
 }

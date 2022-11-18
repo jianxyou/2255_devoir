@@ -17,5 +17,11 @@ public class Bac {
         this.codeQR = codeQR;
     }
 
+    public Double getNiveau_de_remplissage() {
+        return niveau_de_remplissage;
+    }
 
+    public String getType_de_bac(){
+        return this.type_de_bac;
+    }
 }

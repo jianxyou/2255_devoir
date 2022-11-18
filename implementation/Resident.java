@@ -23,7 +23,21 @@ public class Resident extends Compte{
         bacs.add(bac);
     }
 
-    public void remove_un_bac(Bac bac){
-        bacs.remove(bac);
+    public void remove_bac(int numero){
+        bacs.remove(numero);
     }
+
+
+    public void print_bacs(){
+
+        if (bacs.size() == 0){
+            System.out.println("il semble que vous avez pas de bac :(");
+        }
+        for (int i = 0; i < bacs.size(); i++){
+            System.out.println(String.valueOf(i));
+        }
+    }
+
+
+
 }
