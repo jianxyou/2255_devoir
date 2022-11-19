@@ -28,14 +28,33 @@ public class Resident extends Compte{
     }
 
 
-    public void print_bacs(){
+    public void print_info_des_bac(){
 
         if (bacs.size() == 0){
             System.out.println("il semble que vous avez pas de bac :(");
+            return ;
         }
+        System.out.println("Voila tous les bacs que vous avez");
         for (int i = 0; i < bacs.size(); i++){
-            System.out.println(String.valueOf(i));
+            int j = i + 1;
+            System.out.print(j+", ");
+            bacs.get(i).print_info();
         }
+    }
+
+    public void print_etats_des_bacs(){
+        if (bacs.size() == 0){
+            System.out.println("il semble que vous avez pas de bac :(");
+        }
+
+        for (int i = 0; i < bacs.size(); i++){
+            int j = i + 1;
+            System.out.println("===========================================");
+            System.out.print(j+", ");
+            bacs.get(i).print_info();
+            bacs.get(i).print_etats();
+        }
+
     }
 
 

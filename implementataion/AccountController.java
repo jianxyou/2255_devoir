@@ -1,5 +1,6 @@
 
 import javax.print.DocFlavor;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,24 +21,22 @@ public class AccountController {
         this.accounts = new ArrayList<Compte>();
         this.residents = new ArrayList<Resident>();
         this.consommateurs = new ArrayList<Consommateur>();
-
     }
 
     public Boolean verify_password(String account, String password) {
 
         //找到相应的账户，并看对应的密码；
         for (Compte acc : accounts) {
-            if (acc.getAccount() == account) {
-                System.out.println("tamade");
+            if (acc.getAccount().equals(account)) {
                 this.logged_account = acc;
-
-                if (acc.getPassword() == password) {
+                if (acc.getPassword().equals(password)) {
                     return true;
-                } else return false;
+                }
+                else return false;
             }
         }
 
-        return true;
+        return false;
     }
 
     public void create_new_consommateur(String account, String password) {
@@ -51,26 +50,21 @@ public class AccountController {
         Resident resident = new Resident(account, password);
         residents.add(resident);
         accounts.add(resident);
-
     }
 
-
-    public Boolean est_consommateur(String account) {
-
-        //找到相应的账户，并看对应的密码；
-        return true;
-
-    }
 
 
     public Compte get_account(String account_number) {
-        for (Compte acc : accounts) {
-            if (acc.getAccount() == account_number) {
-                return acc;
+
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getAccount().equals(account_number)) {
+                return accounts.get(i);
             }
         }
         return null;
     }
+
+
 
     public int account_exist(String account_number) {
         for (int i = 0; i < accounts.size(); i++) {
