@@ -1,0 +1,341 @@
+
+.body {
+    background-color: rgb(227, 224, 206);
+    text-align: justify;
+}
+
+.title-section {
+display: flex; align-items: flex-start; justify-content: space-between;
+
+}
+
+.report-title {
+    font-size: 4em;
+    color: rgb(223, 169, 51);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.report-summary {
+    max-width: 800px;
+    font-size: 1.4em;
+    color: #555;
+
+
+}
+
+.report-resources {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.report-resource {
+    margin-left: 12px;
+}
+
+.report-resource-link {
+    display: block;
+    padding: 2px;
+}
+
+.report-resource-link__img {
+    height: 36px; width: auto;
+}
+
+.section-title {
+    color: rgb(164, 98, 98);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-size: 2.4em; font-weight: 300;
+}
+
+.subsection-title {
+    margin-bottom: 3px;
+    font-size: 2em; font-weight: bold;
+    color: rgb(210, 171, 129);
+}
+
+.team-section {
+    
+}
+
+    .team-title {
+        font-weight: 500;
+        margin-bottom: 12px;
+        color: rgb(164, 98, 98);
+    }
+
+    .members {
+        display: flex; flex-direction: row;
+    }
+
+    .member {
+        display: flex; flex-direction: column;
+    }
+        .member:not(:last-child) {
+            margin-right: 12px;
+        }
+
+       
+        .member-role {
+            font-size: 0.9em; font-weight: 500;
+            color: #555;
+        }
+
+.report-body {
+    display: flex;
+}
+
+.report-aside {
+    padding-top: 24px; padding-right: 12px; padding-left: 10vw;
+    background-color: #66ab6e;
+}
+
+.report-main {
+    padding-top: 24px; padding-left: 2%; padding-right: 5vw;
+}
+
+.main-section {
+    margin-bottom: 24px;
+}
+
+.nav {
+    color: #E87429;
+}
+
+.nav-item__link {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.nav-item-details {
+    color: #f5f5f5;
+    padding-left: 6px;
+}
+
+.glossary-term {
+    font-weight: bold;
+    background: #222;
+    padding: 3px 6px;
+    display: inline-block;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.glossary-def {
+    margin-top: -6px; margin-left: 6px; margin-bottom: 6px;
+    padding: 12px 6px 4px;
+    background-color: #e5e4e2;
+    border-radius: 4px;
+}
+
+.personas {
+    display: flex;
+}
+
+.persona {
+position: relative;
+display: flex; flex-direction: column;
+margin-right: 12px;
+max-width: 360px;
+padding: 6px 12px;
+border-radius: 2px;
+box-shadow: 0 1px 2px -1px #999;
+background-color: #fff;
+z-index: 2;
+}
+
+.persona-stat {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.persona-type {
+    display: flex; align-items: center; justify-content: center;
+    height: 40px; width: 40px; 
+    font-size: 1.3rem; font-weight: bold; 
+    border-radius: 50%;
+}
+
+.persona-type--pp {
+    background-color: #FF6F61;
+}
+
+.persona-type--eco {
+    background-color: #88B04B;
+}
+
+.persona-market {
+    display: flex; align-items: center; justify-content: center;
+    margin-left: 6px;
+    height: 40px; width: 40px; 
+    color: #444;
+    font-size: 1.3rem; font-weight: bold; 
+    border-radius: 50%;
+    background-color: #d5d5d5;
+}
+
+.persona-color {
+    display: flex; align-items: center; justify-content: center;
+    background-color: #FF6F61;
+    height: 42px; width: 42px; font-weight: bold;
+    justify-self: center; align-self: center;
+    font-size: 1.3rem;
+    border-radius: 50%;
+}
+
+.persona-identity {
+    display: flex; 
+}
+
+.persona-name {
+    font-size: 1.2em; font-weight: 300;
+    flex-grow: 2;
+}
+
+.persona-demography-line {
+    display: flex;
+}
+
+.persona-background {
+    padding: 6px;
+    color: #555;
+}
+
+.persona-title {
+    margin-top: 6px; margin-bottom: 3px;
+    color: #222;
+    font-size: 1.1em; font-weight: 500;
+}
+
+.use-case {
+    display:flex;
+}
+.use-c{
+    display: block;
+   text-align: center;
+}
+.use-case-notes {
+    margin-left: 12px;
+}
+
+.scenario {
+    display: flex;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #a9a9a9;
+}
+
+.scenario-meta {
+    padding: 12px;
+    max-width: 40%;
+    background-color: #e5e4e2;
+}
+
+.scenario-main {
+    flex-grow: 2;
+    padding: 12px;
+    margin-left: 12px;
+}
+
+.scenario-main-title {
+    margin: 0;
+    color: royalblue;
+}
+
+.scenario-alt-title {
+    margin: 0;
+    color: #FF6F61;
+}
+
+.cu-actors {
+    display: flex;
+}
+
+.cu-actor {
+    margin-right: 6px;
+    padding: 4px 6px;
+    color: #fff; font-weight: 500;
+    background-color: #6667AB;
+    border-radius: 1px;
+}
+
+.cu-name {
+    margin: 0;
+    font-weight: 500;
+}
+
+.cu-goal {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+.cu-part--notes {
+    margin-top: 12px;
+}
+
+.cu-part-title {
+    margin: 0;
+    margin-top: 6px;
+}
+
+.cu-conditions {
+    font-weight: 500;
+}
+
+.cu-notes {
+    color: #555;
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.scenario-main-steps {
+    margin: 0; padding-left: 16px;        
+}
+
+.scenario-alt {
+    margin-top: 6px;
+}
+
+.scenario-alt p { margin: 0; }
+
+.scenario-alt-steps { counter-reset: topLevel; }
+    .scenario-alt-steps:not(:last-child) { margin-bottom: 6px; }
+    .scenario-alt-step { counter-increment: topLevel; font-weight: 500; }
+    .scenario-alt-step:before { content: attr(value) counter(topLevel, lower-alpha) '. '; }
+    .scenario-alt-steps ol { font-weight: 400; counter-reset: secondLevel; }
+        .scenario-alt-steps ol li { counter-increment: secondLevel; margin-left: 12px; }
+            .scenario-alt-steps ol li:before { content: attr(value) counter(topLevel, lower-alpha) '.' counter(secondLevel, decimal) '. '}
+
+.glossary {
+    font-size: 1.4em;
+}
+
+.preview-img {
+    display: block;
+    width: 600px;
+    height: auto;
+}
+
+.report-footer {
+    padding: 24px 5vw 24px;
+    color: #fff;
+    background-color: #292723;
+}
+
+    .report-footer p {
+        margin: 0; margin-bottom: 6px;
+    }
+
+.dash:before { 
+    content: '-'; 
+    margin-left: 4px;
+    margin-right: 8px; 
+    font-weight: bold;
+    color: currentColor;
+} 
+
