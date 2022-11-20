@@ -66,6 +66,23 @@ public class AccountController {
 
 
 
+    public void afficher_consommateurs(){
+
+
+        System.out.println("============================================================");
+        for (int i = 1 ; i <= consommateurs.size(); i++){
+            System.out.println( i + ",   consommateurs" + i );
+        }
+
+        System.out.println("============================================================");
+        System.out.println( "Choisir le consommateur que vous voulez savoir plus" );
+        Scanner scan = new Scanner(System.in);
+
+        String number = scan.next();
+        int num = Integer.parseInt(number);
+        consommateurs.get(num-1).print_details();
+    }
+
     public int account_exist(String account_number) {
         for (int i = 0; i < accounts.size(); i++) {
             if (accounts.get(i).getAccount() == account_number) {

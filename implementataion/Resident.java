@@ -57,6 +57,13 @@ public class Resident extends Compte{
 
     }
 
+    public Boolean bacs_est_vide(){
+        if (bacs.size() >= 1){
+            return false;
+        }
+        else return true;
+    }
+
 
 
 }
