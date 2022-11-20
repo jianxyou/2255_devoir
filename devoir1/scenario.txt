@@ -1,0 +1,145 @@
+Scénarios
+Enregistrer mon bac.
+Acteur: résident (principal).
+Préconditions: résident doit avoir un code QR sur son bac. Postcondition: le système doit enregistrer les informations du bac. Scénario principal:
+• Résident sélectionne un type de bac qu'il veut enregistrer.
+• Donne un nom à son bac.
+ 
+• Scanne la code QR du son bac.
+• Système vérifie les informations.
+• Système affiche la page de réussi.
+Afficher les métriques.
+Acteur: résident (principal).
+Préconditions: résident doit avoir un compte. Postconditions: aucun.
+Scénario principal:
+• Résident se connecte.
+• Résident consulte les métriques.
+• Système affiche les métriques.
+Voir les activités que je participe.
+Acteur: résident (principal).
+Préconditions: résident doit avoir un compte. Postconditions: aucun.
+Scénario principal:
+• Résident se connecte.
+• Résident consulte les activités qu'il participe.
+• Système affiche les activités qu'il participe.
+Trouver un consommateur
+Acteur: résident (principal).
+   
+Préconditions: résident doit avoir un compte. Postconditions: aucun.
+Scénario principal:
+• Résident consulte les consommateurs.
+• Système affiche une page de consommateurs avec un mécanisme de recherche.
+• Résident clique le consommateur qu'il veut contacter.
+• Système affiche les informations plus précises sur ce consommateur.
+Cas alternatifs :
+• Résident consulte les consommateurs.
+• Système affiche une page de consommateurs avec un mécanisme de recherche.
+• Le résident entre l’information de filtrage
+• Le système affiche les consommateurs admissibles au filtrage.
+• Résident clique le consommateur qu'il veut contacter.
+• Système affiche les informations plus précises sur ce consommateur.
+Crée un compte
+Acteur: résident ou consommateur (principal).
+Préconditions: aucun.
+Postconditions: système doit enregistrer les infos sur ce nouveau compte. Scénario principal:
+• Résident crée son nom d’utilisateur unique et rentre son mot de passe.
+• Système affiche un formulaire.
+• L’utilisateur remplit le formulaire.
+• L’utilisateur remet le formulaire.
+• Système affiche la page de réussi
+ 
+Scénario alternative:
+• Information invalides/manqués/dupliqué.
+• L’utilisateur remplit à nouveau les informations.
+• L’utilisateur remet le formulaire.
+S'inscrire comme résident
+Acteur: résident(principal)
+Préconditions: aucun
+Postconditions: le système doit enregistrer les infos du résident Scénario principal:
+• Le résident choisi l’option d’inscription.
+• Le système affiche un formulaire.
+• Le résident remplit le formulaire.
+• Le résident remet le formulaire.
+• Système affiche le menu principal. Scénario alternative:
+• Information invalides/manqués/dupliqué.
+• Le système demande à l’utilisateur de remplir les cases erronées.
+• Le résident remplit à nouveau les infos.
+• Le résident remet le formulaire.
+• Système affiche le menu principal.
+S’inscrire comme consommateur
+Acteur: consommateurs (principal).
+  
+Préconditions: aucun.
+Postconditions: le système doit enregistrer les infos du consommateur. Scénario principale :
+• Consommateurs choisie l’option de s’inscrire comme consommateur.
+• Le système affiche un formulaire.
+• Consommateur remplit le formulaire.
+• Consommateur remet le formulaire.
+• Système affiche la page de réussite. Scénario alternative:
+• Information invalides/manqués/dupliqué.
+• Consommateur remplit à nouveau les informations.
+• Consommateur remet le formulaire.
+• Système affiche la page de réussite.
+Mise à jour les usages du bac
+Acteur: capteur(principal) municipale(secondaire). Préconditions: les capteurs sont installés dans les bacs. Postconditions:la page de l'état du bac doit être mise à jour. Scénario principal:
+• Capteur scanne le bac.
+• Capteur envoie les informations collectées à la municipale.
+• Municipale analyse les informations.
+• Municipale élabore les métriques.
+• Municipale met à jour la page de l'état du bac orienté aux résidents.
+• Le résident peut voir la mise a jours de l’état des bacs.
+ 
+Mise à jour le récupération et livraison des déchets
+Acteur: camion (principal), municipale(secondaire).
+Préconditions: camion doit arriver à un checkpoint de récupération ou livraison. Postconditions: les métriques doivent être mise à jour.
+Scénario principal:
+• Camion envoie les informations sur les déchets dès qu'il arrive à un checkpoint.
+• Municipale analyse les informations.
+• Municipale élabore les métriques.
+• Municipale met à jour les métriques.
+• Système affiche la page de réussite.
+Mise à jour les métriques sur le traitement de déchets
+Acteur: consommateur (principal), municipale(secondaire).
+Précondition: aucun.
+Postcondition: les métriques sur les activités, traitement de déchets doivent être mise à jour. Scénario principal:
+• Consommateur demande une mise à jour sur les métriques dès qu'il commence à utiliser les déchets.
+• Système affiche un formulaire.
+• Consommateur remplit le formulaire.
+• Consommateur remet le formulaire.
+• Municipale vérifie le formulaire.
+• Municipale mise à jour les métriques.
+• Municipale mise à jour la page d'activité.
+  
+Scénario alternatif:
+• Municipale n'approuve pas le formulaire.
+• Consommateur remplit à nouveau le formulaire.
+• Consommateur remet le formulaire.
+Signaler un problème.
+Acteur: résident (principal).
+Précondition: résident doit avoir un compte. Postcondition: municipale doit recevoir le problème. Scénario principal:
+• Résident se connecte.
+• Système affiche un formulaire.
+• Résident pose le problème et remplit le formulaire.
+• Résident remet le formulaire.
+• Système affiche la page de réussi.
+Scénario alternative:
+• Information invalides/manqués/dupliqué.
+• Le système demande au résident de remplir les informations erronées.
+• Résident remplit à nouveau les informations.
+• Résident remet le formulaire.
+• Système affiche la page de réussi.
+Consulter le traitement de déchets
+Acteur: résident (principal).
+  
+Préconditions: résident doit avoir un compte. Postconditions: aucun.
+Scénario principal:
+• Résident se connecte.
+• Résident consulte les métriques.
+• Système affiche la page de traitement.
+Mise à jour la page des consommateurs
+Acteur: municipal(principal). Précondition: aucun. Postcondition: aucun. Scénario principal:
+• Municipal consulte les informations sur les consommateurs.
+• Municipal collecte les informations utiles.
+• Municipal analyse les informations.
+• Municipal met à jour la page des consommateurs afin que les résidents soient au
+courant de la nouvelle liste de consommateurs.
