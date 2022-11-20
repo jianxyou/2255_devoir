@@ -25,17 +25,13 @@ public class MetriqueControlleur {
     //participation au composte :
     //prend en parapemtre un tableau de niveau de remplissage de trois categorie de composte et
     //un tableau de dimension 3 contenant l'usage des trois categorie de composte
-
     //private ArrayList<Besoin> besoins;
+
+
     private ArrayList<Metrique> metriques;
-
-
-
     public void ParticipC(ArrayList<Double> tNc,ArrayList<Double> Ec){
-
         double Uc=calculeUc(tNc,Ec);
         System.out.println("niveau de participation au composte="+Uc);
-
     }
     //calcule Uc retourne le niveau de participation au composte
     //prend en parametre le tableau d'usage des trois categorie de composte et le tableau
@@ -52,13 +48,8 @@ public class MetriqueControlleur {
     }
 
 
-    /*
-    public void create_un_besoin(String besoin){
-        this.besoins.add(besoin);
 
-    }
 
-     */
 
     //participation au recyclage:
     //prend en parapemtre un tableau de niveau de remplissage de trois categorie de recyclage et
@@ -66,7 +57,6 @@ public class MetriqueControlleur {
     public void ParticipR(ArrayList<Double> tNr,ArrayList<Double> Er){
         double Ur =calculeUr( tNr, Er);
         System.out.println("niveau de participation au recyclage="+Ur);
-
     }
     //calcule Uc retourne le niveau de participation au recyclage
     //prend en parametre le tableau d'usage des trois categorie de recyclage et le tableau
@@ -104,10 +94,6 @@ public class MetriqueControlleur {
         double CN = (Nr * Cr + Nc * Cc + No * Co - CIM) / CIM;
         double score = 1 - Math.max (0, CN);
         System.out.println("score econo="+score);
-
-
-
-
     }
 
     //calculer la proportion de remplissage prend en parametre niveau de remplissage
@@ -122,7 +108,6 @@ public class MetriqueControlleur {
         double Nr1=tNr.get(0);
         double Nr2=tNr.get(1);
         double Nr3=tNr.get(2);
-
         double erreur=Nr-(Nr1+Nr2+Nr3)+1/Nr+1;
         System.out.println("niveau de erreur de recyclage="+erreur);
 
@@ -141,7 +126,7 @@ public class MetriqueControlleur {
 
 
 
-    public void consulter_les_metriques(){
+    public void consulter_les_metriques() {
 
 
         System.out.println("===========================================");
@@ -174,10 +159,129 @@ public class MetriqueControlleur {
         scoreEcono(Cr, Cc, Co, Nc, No, Nr, CIM);
         erreurC(Nc, tNc);
         erreurR(Nr, tNr);
-
-
     }
 
+
+    public void parametrise_metrique(){
+
+        double Pr = 23.0;
+        double Pc = 46.0;
+        double Po = 53;
+
+        double Cr = 2.0;
+        double Cc = 54;
+        double Co = 23;
+
+        double PNUI = 100;
+        double CIM = 100;
+
+        double Nr = 70;
+        double Nc = 80;
+        double No = 40;
+
+
+        ArrayList<Double> Er = new ArrayList<Double>(Arrays.asList(33.0, 44.0, 3.0));
+        ArrayList<Double> Ec = new ArrayList<Double>(Arrays.asList(34.0, 55.0, 12.0));
+        ArrayList<Double> tNc = new ArrayList<Double>(Arrays.asList(55.0, 20.0, 1.0));
+        ArrayList<Double> tNr = new ArrayList<Double>(Arrays.asList(8.0, 7.0, 43.0));
+
+
+        System.out.println("Choisir le metrique que vous voulez contribuer");
+
+        System.out.println("1, niveau de participation au composte");
+        System.out.println("2, participation au recyclage");
+        System.out.println("3, score Ecolo");
+        System.out.println("4, scoreEcono");
+        System.out.println("5, niveau d'erreur de recyclage");
+        System.out.println("6, niveau d'erreur de composte ");
+
+
+        Scanner scan = new Scanner(System.in);
+        String option = scan.next();
+
+        ParticipC(tNc, Ec);
+        ParticipR(tNr, Er);
+        PosNegative(Nr, Nc, No);
+        scoreEcolo(Co, CIM, Nr, Nc, No, Pr, Pc, Po, PNUI);
+        scoreEcono(Cr, Cc, Co, Nc, No, Nr, CIM);
+        erreurC(Nc, tNc);
+        erreurR(Nr, tNr);
+
+
+
+        System.out.println("===========================================");
+        switch(option){
+            case "1":
+                System.out.print("avant integre vos donnees    ");
+                ParticipC(tNc, Ec);
+
+                Ec = new ArrayList<Double>(Arrays.asList(30.0, 52.0, 13.0));
+                System.out.print("avoir integre vos donnees     ");
+                ParticipC(tNc, Ec);
+
+            case "2":
+                System.out.print("avant integre vos donnees    ");
+                ParticipR(tNr, Er);
+
+
+                Er = new ArrayList<Double>(Arrays.asList(23.0, 14.0, 3.0));
+                System.out.print("avoir integre vos donnees     ");
+                ParticipC(tNc, Ec);
+
+
+
+
+            case "3":
+
+                System.out.print("avant integre vos donnees    ");
+                scoreEcolo(Co, CIM, Nr, Nc, No, Pr, Pc, Po, PNUI);
+
+                Nc = 40;
+                No = 300;
+                System.out.print("avoir integre vos donnees     ");
+                scoreEcolo(Co, CIM, Nr, Nc, No, Pr, Pc, Po, PNUI);
+                break;
+
+            case "4":
+
+
+                System.out.print("avant integre vos donnees    ");
+                scoreEcono(Cr, Cc, Co, Nc, No, Nr, CIM);
+
+                Cc = 30;
+                Cr = 30;
+                System.out.print("avoir integre vos donnees     ");
+                scoreEcono(Cr, Cc, Co, Nc, No, Nr, CIM);
+                break;
+
+
+            case "5":
+                System.out.print("avant integre vos donnees    ");
+                erreurC(Nc, tNc);
+
+
+                tNc = new ArrayList<Double>(Arrays.asList(90.0, 350.0, 1.0));
+                System.out.print("avoir integre vos donnees     ");
+                erreurC(Nc, tNc);
+                break;
+
+
+            case "6":
+                System.out.print("avant integre vos donnees    ");
+                erreurR(Nr, tNr);
+
+
+                tNr = new ArrayList<Double>(Arrays.asList(9.0, 4.0, 30.0));
+                System.out.print("avoir integre vos donnees     ");
+                erreurR(Nr, tNr);
+
+
+
+
+
+
+        }
+    }
 }
 
 

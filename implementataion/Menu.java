@@ -90,7 +90,7 @@ public class Menu{
         System.out.println("4, consulter les metriques" );
         System.out.println("5, trouvez un consommateur" );
         System.out.println("6, signaler une probleme：" );
-        System.out.println("7, voir les activites maintenus" );
+        System.out.println("7, parametrise les metriques" );
         System.out.println("8, voir l'etats de traitements" );
         System.out.println("9, exit");
 

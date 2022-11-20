@@ -27,7 +27,6 @@ public class BacController {
 
         Bac bacc = new Bac(type,codeQR);
         logged_resident.ajout_un_bac(bacc);
-
         logged_resident.print_info_des_bac();
     }
 
@@ -39,7 +38,9 @@ public class BacController {
     public void supprimer_un_bac(){
 
         logged_resident.print_info_des_bac();
-
+        if (logged_resident.bacs_est_vide()){
+            return ;
+        }
         Scanner scan = new Scanner(System.in);
         System.out.println("choisir le numero du bac que vous voulez supprimer");
         int numero = Integer.parseInt(scan.next());

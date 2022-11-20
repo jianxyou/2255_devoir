@@ -20,6 +20,8 @@ public class bineco {
         AccountController account_controller = new AccountController();
         BacController bac_controller = new BacController();
         MetriqueControlleur metrique_controller = new MetriqueControlleur();
+       // ActivityController activityController = new ActivityController();
+
 
         Menu menu = new Menu();
         menu.display_bineco();
@@ -28,6 +30,9 @@ public class bineco {
 
         Boolean avoir_un_compte = menu.display_premier_page();
 
+        for (int i = 1; i<=10 ; i++){
+            account_controller.create_new_consommateur("kkkkkkkkkkkkkk","kkkkkkkkkkkkkkk");
+        }
 
         if (!avoir_un_compte){
             ArrayList<String> acc = menu.display_create_account_page();
@@ -97,6 +102,25 @@ public class bineco {
                 case "4":
                     metrique_controller.consulter_les_metriques();
                     break;
+
+
+                case "5":
+                    account_controller.afficher_consommateurs();
+                    break;
+
+                case "6":
+                    System.out.println("Veuillez décrivez quel est votre problème ci-dessous");
+                    scan.next();
+                    System.out.println("On a bien recu votre demande :)");
+                    break;
+
+                case "7":
+                    metrique_controller.parametrise_metrique();
+                    break;
+                case "8":
+                    System.out.println("votre déchtes est en route de récupération  :)");
+                    break;
+
                 case "9":
                     exit =true;
             }
