@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='rapport.css'>
+    <title>IFT2255 | Rapport DM2</title>
+    
+    
+</head>
+
+<body class="body">
+    <main class="report-body">
+        <aside class="report-aside">
+            
+        </aside>
+        <div class="report-main">
+            <div class="title-section">
+                <div>
+                    <h1 class="report-title">Bineco</h1>
+                    <p class="report-summary">
+                        <em>Court résumé du rapport</em> –  Le domaine de ce projet est la gestion des déchets des résidents de la ville de Montréal. Le problème 
+                        à résoudre est le manque d’information et de contrôle que 
+                        les résidents ont sur l’acheminement de leurs déchets. La création de l’outil Bineco vise à rendre accessible 
+                        le suivi des déchets en fournissant plusieurs métriques et d’autres informations sur les déchets des résidents, 
+                        afin que ces derniers fassent des meilleures actions écologiques.
+                    </p>
+                </div>
+    
+               
+            
+            </div>
+            <div class="team-section">
+
+                <h2 class="team-title">Notre équipe</h2>
+                <ul class="bare-list members">
+                    <li class="member">
+                      
+                        <div class="member-identification">
+                            <span class="member-name">Zeinab Taleb</span>
+                            <span class="member-id">20102655</span>
+                        </div> 
+                        <a href="mailto:prenom.nom@umontreal.ca">zeinab.taleb@umontreal.ca</a>
+                        <span class="member-role">Chargé de diagramme d activite</span>
+                    </li>
+                    <li class="member">
+       
+                        <div class="member-identification">
+                            <span class="member-name">Jianxin You </span>
+                            <span class="member-id"></span>
+                        </div> 
+                        <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                        <span class="member-role">Chargé de diagrame de class </span>
+                    </li>
+                    <li class="member">
+    
+                        <div class="member-identification">
+                            <span class="member-name">Harold Jose-Cruz</span>
+                            <span class="member-id">20227229</span>
+                        </div> 
+                        <a href="mailto:prenom.nom@umontreal.ca">prenom.nom@umontreal.ca</a>
+                        <span class="member-role"> Chargé de diagramme de sequence.</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <section class="main-section">
+                <h2 id="plan" class="section-title">Plannification</h2>
+                <p>
+                    <em>
+                        Description brève du domaine et du problème. <br>
+                        Présentation de l'échéancier et la distribution des taches <br>
+                        Présentation des hypothèses (optionnel)
+                    </em>
+                </p>
+            </section>
+
+            <section class="main-section">
+                <h2 id="domain" class="section-title">Compréhension du domaine</h2>
+                <p>
+                    Après de nombreuses rencontres avec le client et une familiarisation avec les activités de recyclage et compostage, 
+                    nous avons préparé un glossaire rassemblant les termes et expressions clés caractérisant l'environnement.
+                </p>
+
+                <h3 class="subsection-title">Glossaire</h3>
+                <dl class="glossary">
+                    <dt class="glossary-term">résidents</dt>
+                    <dd class="glossary-def">les habitant de la ville de Montréal.</dd>
+                    <dt class="glossary-term">Consommateur de déchets</dt>
+                    <dd class="glossary-def"> Organisation qui mène des activités de compostage et de recyclage des déchets des résidents.</dd>
+                    <dt class="glossary-term">La ville (municipale)</dt>
+                    <dd class="glossary-def"> fournisseur des bacs; captent les informations sur le contenues des bacs; mise a jours de la liste de consommateurs; fournit la plage d’horaire de ramassage de la poubelle; reçoit les signaux qui sont émis par les résidents.</dd>
+                
+                    <dt class="glossary-term">Capteur </dt>
+                    <dd class="glossary-def">mécanisme implémentée dans le système Bineco permettant de recevoir de l’information sur d'inventorisation du contenu des bac.</dd>
+                    <dt class="glossary-term">Bineco</dt>
+                    <dd class="glossary-def">outil permetant la communication des activités de recyclage et compostage résultant du travail de tri effectué dans les foyers</dd>
+                    <dt class="glossary-term">bacs</dt>
+                    <dd class="glossary-def">il existe trois bacs : ordure, recyclage et compostage</dd>
+                    <dt class="glossary-term">lieu</dt>
+                    <dd class="glossary-def">Montréal</dd>
+                    <dt class="glossary-term">code Qr</dt>
+                    <dd class="glossary-def">specifique a chaque bacs permettant d'identifier un bac</dd>
+                    
+                
+                
+                </dl>
+
+                <h3 class="subsection-title">Persona</h3>
+
+                <ul class="bare-list personas">
+                    <li class="persona">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                            <span class="persona-name">Jean – <em>professeur</em></span>
+                            
+                        </div>
+                        <span class="persona-info">Homme célibataire de 30 ans </span>
+                        <div class="persona-goal">
+                            <h4 class="persona-title">Buts</h4>
+                            <ul class="bare-list">
+                                <li >But principal:Savoir facilement la composition de ses déchets chaque semaine</li>
+                       
+                                <li >Avantages:Grâce à Bineco, il peut obtenir de l’information sans avoir besoin de suivre chaque déchet, ou de fouiller dans ses bacs.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="persona">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                            <span class="persona-name">marie – <em>médecin</em></span>
+                            
+                        </div>
+                        <span class="persona-info">Femme mariée de 31 ans</span>
+                        <div class="persona-goal">
+                            <h4 class="persona-title">Buts</h4>
+                            <ul class="bare-list">
+                                <li >But principal:Participer à diverses activités menées par des différents consommateurs de déchets.</li>
+                  
+                                <li >Elle peut facilement rechercher plusieurs consommateurs de déchets sur seulement une application.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="main-section">
+                <h2 id="model" class="section-title">Modélisation du domaine</h2>
+
+                <h3 class="subsection-title">Cas d'utilisation</h3>
+                <div class="use-case">
+                    <a class="use-case-link" href="cu.vpp">
+                        <img class="use-case-img" src="image/cu.jpg" alt="cu">
+                    </a>
+                    
+                </div>
+
+                <h3 class="subsection-title">Scénarios</h3>
+
+                <div class="scenario" id="cu-1">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> enregistrer un bac
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> un utilisateur souhaite enregistrer un bac dans l'outil Bineco
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">aucun (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">résident doit avoir un code QR sur son bac.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">le système doit enregistrer les informations du bac.</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Résident sélectionne un type de bac qu'il veut enregistrer.</li>
+                            <li class="scenario-main-step">Donne un nom à son bac.</li>
+                            <li class="scenario-main-step">Scanne la code QR du son bac.</li>
+                            <li class="scenario-main-step">Système vérifie les informations.</li>
+                  
+                            <li class="scenario-main-step">Système affiche la page de réussi.</li>
+                        </ol>
+
+                        
+                    </div>
+                </div>
+
+                <div class="scenario" id="cu-2">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Afficher les métriques écologiques
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> visualiser les metriques ecologique 
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">resident doit etre connecté.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">Aucun</li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Résident se connecte.</li>
+                            <li class="scenario-main-step">Résident consulte les métriques.</li>
+                            <li class="scenario-main-step">Système affiche les métriques.</li>
+                        </ol>
+
+                        
+                    </div>
+                </div>
+                
+
+<div class="scenario" id="cu-4">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Trouver un consommateur
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> un utilisateur souhaite trouver un consommateur
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">aucun (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">resident doit etre connecté</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">aucun </li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Résident consulte les consommateurs.</li>
+                            <li class="scenario-main-step">Système affiche une page de consommateurs avec un mécanisme de recherche. </li>
+                            <li class="scenario-main-step">Résident clique le consommateur qu'il veut contacter.</li>
+                            <li class="scenario-main-step">Système affiche les informations plus précises sur ce consommateur.
+                            </li>
+                  
+             
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="3">
+                                    Résident consulte les consommateurs.
+                                    <ol class="bare-list">
+                                        <li value="3"> Système affiche une page de consommateurs avec un mécanisme de recherche.</li>
+                                        <li value="3">Le résident entre l’information de filtrage</li>
+                                        <li value="3">Le système affiche les consommateurs admissibles au filtrage.</li>
+                                        <li value="3">Résident clique le consommateur qu'il veut contacter.
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-5">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Crée un compte
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong>un utilisateur voudrez avoir un compte Bineco
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">municeInfo (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">aucun</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">système doit enregistrer les infos sur ce nouveau compte.</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Résident crée son nom d’utilisateur unique et rentre son mot de passe.
+                            </li>
+                            <li class="scenario-main-step">Système affiche un formulaire.
+                            </li>
+                            <li class="scenario-main-step"> L’utilisateur remplit le formulaire.
+                            </li>
+                            <li class="scenario-main-step"> L’utilisateur remet le formulaire.</li>
+                            <li class="scenario-main-step"> systeme verifie les information 
+                            </li>
+                            <li class="scenario-main-step">Système affiche la page de réussi.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="5">
+                                    Information invalides/manqués/dupliqué.
+                                    <ol class="bare-list">
+                                        <li value="5">L’utilisateur remplit à nouveau les informations.</li>
+                                        <li value="5"> L’utilisateur remet le formulaire</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-6">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> S'inscrire comme résident
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> un utilisateur voudrait a adherer a l'application bineco en tant que resident
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">aucun (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">l'utilisatuer doit avoir un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">le système doit enregistrer les infos du résident</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Le résident choisi l’option d’inscription.</li>
+                            <li class="scenario-main-step"> Le système affiche un formulaire.</li>
+                            <li class="scenario-main-step">Le résident remplit le formulaire.</li>
+                            <li class="scenario-main-step"> Le résident remet le formulaire.</li>
+                  
+                            <li class="scenario-main-step">Système affiche le menu principal.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="4">
+                                    Information invalides/manqués/dupliqué.
+                                    <ol class="bare-list">
+                                        <li value="4"> Le système demande à l’utilisateur de remplir les cases erronées.</li>
+                                        <li value="4">Le résident remplit à nouveau les infos.</li>
+                                        <li value="4">Le résident remet le formulaire.</li>
+                                        
+
+                                    </ol>
+                                </li>
+                            </ol>
+                            
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-7">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> S’inscrire comme consommateur
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> l'utilisateur souhaite sinscrire en tant que consommateur
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">utilisateur (Principal)</li>
+                                <li class="cu-actor">municipale (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">utilisateur a un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">le système doit enregistrer les infos du consommateur.</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Consommateurs choisie l’option de s’inscrire comme consommateur.</li>
+                            <li class="scenario-main-step">Le système affiche un formulaire.</li>
+                            <li class="scenario-main-step">Consommateur remplit le formulaire.</li>
+                            <li class="scenario-main-step">Consommateur remet le formulaire.</li>
+                  
+                            <li class="scenario-main-step">Système affiche la page de réussite.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="4">
+                                    Information invalides/manqués/dupliqué.
+                                    <ol class="bare-list">
+                                        <li value="4">Consommateur remplit à nouveau les informations.</li>
+                                        <li value="4">Consommateur remet le formulaire.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                   
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-8">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Mise à jour le récupération et livraison des déchets
+
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> traitement des dechets
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor"> camion(Principal)</li>
+                                <li class="cu-actor">municipal (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">camion doit arriver à un checkpoint de récupération ou livraison.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">les métriques doivent être mise à jour.</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Camion envoie les informations sur les déchets dès qu'il arrive à un checkpoint.</li>
+                            <li class="scenario-main-step">Municipale analyse les informations.</li>
+                            <li class="scenario-main-step">Municipale élabore les métriques.</li>
+                            <li class="scenario-main-step">Municipale met à jour les métriques.</li>
+                        </ol>
+
+                        
+                    </div>
+                </div>
+                <div class="scenario" id="cu-9">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong>paramtriser les métriques sur le traitement de déchets
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> un utilisateur souhaite de changer les parametre des metriques
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">utilisateur (Principal)</li>
+                                <li class="cu-actor">municeInfo(secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">presence des metrique et utilisateur connecté</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">nouveau calcule des metriques</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">le systeme affiche les metriques</li>
+                            <li class="scenario-main-step">l'utilisateur choisi un metrique</li>
+                            <li class="scenario-main-step">l'utilisateur modifie les parametres.</li>
+                            <li class="scenario-main-step">le systeme calcule les nouveaux metriques</li>
+                  
+                            
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="3">
+                                    valeur parametrique invalide.
+                                    <ol class="bare-list">
+                                        <li value="3">l'utilisateur rentre une nouvelle valeur numerique valable</li>
+                                        <li value="3">le systeme calcule a nouveau les metriques</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-10">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Signaler un problème.
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> un utilisateur souhaite signaler une probleme a la ville
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">ville (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">résident doit avoir un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash"> municipale doit recevoir le problème.</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">Résident se connecte.</li>
+                            <li class="scenario-main-step">Système affiche un formulaire.</li>
+                            <li class="scenario-main-step">Résident pose le problème et remplit le formulaire.
+                            </li>
+                            <li class="scenario-main-step">resident specifie le bac avec lequel il a une probleme</li>
+                  
+                            <li class="scenario-main-step">Système affiche la page de réussi.</li>
+                        </ol>
+
+                        <div class="scenario-alt">
+                            <h5 class="scenario-alt-title">Scénarios alternatifs</h5>
+                            <ol class="bare-list scenario-alt-steps">
+                                <li class="scenario-alt-step" value="3">
+                                    Information invalides/manqués/dupliqué.
+                                    <ol class="bare-list">
+                                        <li value="3">Le système demande au résident de remplir les informations erronées.</li>
+                                        <li value="3"> Résident remplit à nouveau les informations.</li>
+                                        <li value="3"> Résident remet le formulaire.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                           
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario" id="cu-11">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> Consulter le traitement de déchets
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> voir l'etat de traitement des dechets
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">aucun (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">résident doit avoir un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">aucun</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">la ville met a jour letat de traitement de dechet</li>
+                            <li class="scenario-main-step">le resident consulte les metriques</li>
+
+                  
+                        </ol>
+
+                        
+                    </div>
+                </div>
+                <div class="scenario" id="cu-12">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> notifier les residents
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> les consommateur envoie une notification aux residents
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">consommateur (Principal)</li>
+                                <li class="cu-actor">resident (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">consommateus doit avoir un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">les residents recoivent une notification</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">le consommateur remplie le formulaire</li>
+                            <li class="scenario-main-step">le consommateur choisie le type de probleme</li>
+                            <li class="scenario-main-step">le consommateur choisie la categorie du dechet</li>
+                            <li class="scenario-main-step">le systeme envoie la notification a tous les resident enregistrer dans le systeme</li>
+                        </ol>
+
+                        
+                    </div>
+                </div>
+
+                <div class="scenario" id="cu-13">
+                    <div class="scenario-meta">
+                        <h4 class="cu-name">
+                            <strong>CU:</strong> noter un consommateur
+                        </h4>
+                        <p class="cu-goal">
+                            <strong>Objectif:</strong> le resident donne une note de 1 a 5 a un consommateur
+                        </p>
+                        
+                        <hr>
+
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Acteurs</h5>
+                            <ul class="bare-list cu-actors">
+                                <li class="cu-actor">resident (Principal)</li>
+                                <li class="cu-actor">consommateur (secondaire)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Préconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">resident doit avoir un compte.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cu-part">
+                            <h5 class="cu-part-title">Postconditions</h5>
+                            <ul class="bare-list cu-conditions">
+                                <li class="dash">la note s'ajoute aux données du consommateur</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="scenario-main">
+                        <h5 class="scenario-main-title">Scénario principal</h5>
+                        <ol class="scenario-main-steps">
+                            <li class="scenario-main-step">le resident remplie le formulaire</li>
+                            <li class="scenario-main-step">le resident choisie un consommateur</li>
+                            <li class="scenario-main-step">le resident choisie le type d'activités</li>
+                            <li class="scenario-main-step">le resident choisie une note entre de 1 a 5</li>
+                            <li class="scenario-main-step">le resident confirmele formulaire</li>
+                            <li class="scenario-main-step">le systeme enregistre la note accorde au consommateur </li>
+                            <li class="scenario-main-step">calcule de la moyenne des notes données a ce consommateur</li>
+                        </ol>
+
+                        
+                    </div>
+                </div>
+
+                
+                
+            </section>
+
+            <section class="main-section">
+                <h2 id="analysis" class="section-title">Analyse</h2>
+                <p>Notre analyse préliminaire nous a permis d'élucider les besoins et risques suivants...</p>
+                <div>
+                    <h3 class="subsection-title">Risques</h3>
+                    <ol class="risks">
+                        <li>Indisponibilité de ressource informatique: les résidents qui non pas de matériels
+                            électroniques permettant d'utiliser l'application.</li>
+                        <li>La température externe: en cas de tempête de neige cela peut conduit à un
+                            décalage de l'arrivée des camions qui collectent la poubelle</li>
+                        <li>Ne pas trouver un consommateur: les déchets vont s'accumuler et la poubelle
+                            ne sera pas recyclé.</li>
+                        <li>Panne de courant : aucun utilisateur sera en mesure de modifier les données ou
+                            accédé au compte.</li>
+                        <li>Niveau de remplissage atteint: niveau de remplissage de la poubelle est à 100%
+                            mais il reste de poubelle a jeté, donc le résident ne sera pas en mesure d enregistrer le niveau de remplissage.</li>
+                    </ol>
+                </div>
+
+                <div>
+                    <h3 class="subsection-title">besoin non-fonctionnelles</h3>
+                    <ol class="nf-requirements">
+                        <li>Le système ne permet pas les duplications de données : le code Qr ne peut pas être enregistrer deux fois pour deux adresses diffèrent.</li>
+                        <li>Comporte vis à vis du temps: la ville met en contact les résidents de l'heure de cueillette de la poubelle.</li>
+                        <li>Le système consiste la présence des données spécifiques : chaque utilisateur doit enregistrer le code Qr des bacs pour effectuer les tâches suivantes: Afficher l'état des bacs, Voir l'état de traitement des déchets.</li>
+                        <li>Maintenance : Le système est suffisamment intuitif pour faciliter l'opération au client: les utilisateurs peuvent changer leurs données personnelles par exemple en cas d'un déménagement.</li>
+                        <li>Le système est suffisamment intuitif pour faciliter l'opération des utilisateurs : la possibilité de revenir au menu principal sans quitter l'application.</li>
+                        <li>Performance : lorsqu’un résident ajoute de la poubelle le niveau de remplissage change en 5 secondes.</li>
+                        <li>Sécurité : le système doit avoir un système de sécurité puisque l'utilisateur enregistre cette donnée personnelle pour cela le système exige un mot de passe de 12 caractères: au moins une lettre majuscule, lettre minuscule, chiffre et caractère spécial.</li>
+                        <li>Le système doit être quantifiées: le système doit pouvoir traiter 100000 utilisateurs simultanément avec un temps de réponse inférieur à 2 secondes par utilisateur.</li>
+
+                    </ol>
+                </div>
+
+                <div>
+                    <h3 class="subsection-title">Besoin matériels</h3>
+                    <h3 >Parties à informatiser:</h3>
+                    <ol class="nf-requirements">
+                        <li>Gestion des résidents. </li>
+                        <li>Gestion des consommateurs.</li>
+                        <li>Gestion des bacs (recyclage, ordure, compostage). </li>
+                    </ol>    
+                    <h3 >Matériels nécessaires:</h3>
+                    <ol class="nf-requirements">
+                        <li>Ordinateurs personnels. </li>
+                        <li> Disponibilité d'un cellulaire ou ordinateur chez l'utilisateurs de l'application
+                             Bineco.</li>
+                        <li> Bac de recyclage, composte, et ordure.</li>
+
+                        <li> Camion pour collecter la poubelle.</li>
+                        <li> Accès à l'internet.</li>
+
+                    </ol>   
+                    <h3 >Solution de stockage :</h3>
+                    <ol class="nf-requirements">
+                        <li>Fichier CSV. </li>
+                        <li>Un cache intégré pour fournir la vitesse de la RAM avec la durabilité du disque).</li>
+                        <li>Données sont stockées sur un disque.</li>
+                    </ol>    
+                </div>
+
+                <div>
+                    <h3 class="subsection-title">Contraintes</h3>
+                    <h3>physique:</h3>
+                    <ol class="nf-requirements"> 
+                        <li>Trois bacs de poubelle différents (composte, recyclage et ordure) avec un code Qr</li>
+                        <li>Chaque le code QR est Lié à une adresse</li>
+                        <li>Une mémoire allant jusqu'à 2 MB pour les résidents permettant de sauvegarder leurs changements de poubelles.</li>
+                        <li>Mémoire de stockage allant jusqu’à 50 Terra pour les serveurs de la municipale permettant de stocker les différentes métriques et donnés des consommateurs et des résidents.</li>
+                        
+                    </ol>
+                    <h3>conceptuelle:</h3>
+                    <ol class="nf-requirements">
+                        <li>Langage de programmation java qui permet de gérer l'application plus rapidement, même avant que le programme soit exécuté la compilation va traduire le code en code machine.</li>
+                        <li>le capteur peut detecter les elements selon le bacs</li>
+                        <li>format des données du capteur en CSV</li>
+                        <li>Compatibilité avec le système municipal (API)</li>
+                        <li>Abstraction choisie pour encapsuler les entités du domaine</li>
+                        <li>nteraction en ligne de commande</li>
+
+                    </ol>    
+
+                </div>
+
+                <div>
+                    <h3 class="subsection-title">Propositions</h3>
+                    <ol class="nf-requirements">
+                        <li>niveau de participation au compostage</li>
+                        <li>niveau de participation au recyclage</li>
+                        <li>le score ecologique </li>
+                        <li>le score economique</li>
+                        <li>proportion d'erreur de compostage</li>
+                        <li>proportion d'erreur de recyclage</li>
+                        <li>niveau de remplissage d'ordure</li>
+                        <li>niveau de remplissage de bac de recyclage</li>
+                        <li>niveau de remplissage de bac de compostage</li>
+                    </ol>    
+                    
+                </div>
+            </section>
+            <section class="main-section">
+                <h2  class="section-title">Livrable</h2>
+                <h3 class="subsection-title">diagramme d'activite</h3>
+                <div class="use-c">
+                    <h2>affichage menu principal</h2>
+                    <a class="use-c" href="diagramme_d'activite.vpp">
+                        <img class="use-c-img" src="image/menu principal.jpg" alt="menu">
+                    </a>
+                    </div>
+                   
+                    <div class="use-c" >
+                        <h2>enregistrer un bac</h2>
+                        <img class="use-c-img" src="image/enregistrer bac.jpg" alt="newbac"></div>
+                    <div class="use-c">
+                        <h2>enregistrer un bac</h2>
+                        <img class="use-c-img" src="image/etat bac.jpg" alt="etatbac"></div>
+                    <div class="use-c">
+                        <h2>afficher l'etat de traitement municipal</h2>
+                        <img class="use-c-img" src="image/etat de traitement municipal.jpg" alt="etat traitement"></div>
+                    <div class="use-c">
+                        <h2>trouver un consommateur</h2>
+                        <img class="use-c-img" src="image/trouver consommateur.jpg" alt="find consommateur"></div>
+                    <div class="use-c">
+                        <h2>signaler un probleme</h2>
+                        <img class="use-c-img" src="image/signaler probleme.jpg" alt="signaler"></div>
+                    <div class="use-c">
+                        <h2>noter un consommateur</h2>
+                        <img class="use-c-img" src="image/noter consommateur.jpg" alt="noter"></div>
+                    <div class="use-c">
+                        <h2>notifier un resident</h2>
+                        <img class="use-c-img" src="image/notifier resident.jpg" alt="notifier"></div>
+                    <div class="use-c">
+                        <h2>afficher les metriques</h2>
+                        <img class="use-c-img" src="image/afficher metrique ecologique.jpg" alt="metrique"></div>
+                    <div class="use-c">
+                        <h2>paramtriser les metriques</h2>
+                        <img class="use-c-img" src="image/parametriser les metriques.jpg" alt="paramtriser metrique"></div>
+            </section>   
+            <section class="main-section">
+                <h2 id="prototype" class="section-title">Prototype</h2>
+
+                <p>
+                    <em>
+                        Ci-dessous nous illustrons notre prototype en présentant 5 vues de l'application. 
+                        Ce prototype utilise une interface en ligne de commande...</em>
+                </p>
+                <ul class="bare-list previews">
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Menu principal</h4> 
+                        <img class="preview-img" src="../assets/images/prototype_gym.jpg" alt="">
+                        Le menu principal est affiché au démarage de l'application. L'utilisateur entre le numéro 
+                        associé au sous-menu ou à l'action pour y accéder ou l'exécuter.
+                    </li>
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
+                        <img class="preview-img" src="../assets/images/prototype2.png" alt="">
+                        Description de la vue présentée...
+                    </li>
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
+                        <img class="preview-img" src="url-prototype.png" alt="">
+                        Description de la vue présentée...
+                    </li>
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
+                        <img class="preview-img" src="url-prototype.png" alt="">
+                        Description de la vue présentée...
+                    </li>
+                    <li class="preview">
+                        <h4 style="font-size: 1.2em; margin-bottom: 6px">Titre de la vue</h4> 
+                        <img class="preview-img" src="url-prototype.png" alt="">
+                        Description de la vue présentée...
+                    </li>
+                
+            </ul></section>
+        </div>
+    </main>
+    
+
+</body></html>
