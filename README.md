@@ -17,6 +17,7 @@ pour cela nous avons fourni un rapport qui prend en mesure de décrire les point
      diagramme de sequence<br />
 <br />
 Vous trouvez dans le répertoir prototype des vues sur l'outil bineco:<br />
+Compliez et executez le bineco.java
 Accéder premièrement au fichier : <br />
  il suffit de lance de le programme java, pour la premiere fois il faut mettre non pour un compte vous creer un compte comme 1234 avec le mot de passe 1234 
  une fois creer cela vous permet de vous rendre dasn le menu principal et la cest le jeu il faut seleument de choisir des choix et visualiser les resultats
