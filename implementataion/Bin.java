@@ -17,6 +17,7 @@ public class Bin implements Serializable {
 	ArrayList<String> fillLevelHist = new ArrayList<String>(); //? with a certain time interval
 	ArrayList<String> compositionHist = new ArrayList<String>(); //? prof said not need
 
+	public Bin() {} // testing purposes constructor
 	public Bin(String qrCode, String name, String type, String address) {
 		this.qrCode = qrCode;
 		this.name = name;

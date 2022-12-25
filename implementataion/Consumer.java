@@ -9,6 +9,12 @@ public class Consumer extends Account implements Serializable {
 	private double rating; // is equal to the average rating of all the consumer's activities' average ratings
 
 	public Consumer() {} //test purposes
+	public Consumer(String name, String email, String wasteTypes, ArrayList<ConsumerActivity> activities) { // testing purposes constructor
+		this.name = name;
+		this.email = email;
+		this.wasteTypes = wasteTypes;
+		this.activities = activities;
+	}
 	
 	public Consumer(String code, String name, String address, String email, String telephone, String wasteTypes, ArrayList<ConsumerActivity> activities, double processingCapacity, String password) {
 		this.code = code;
