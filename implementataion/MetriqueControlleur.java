@@ -1,7 +1,8 @@
 
 import java.awt.image.AreaAveragingScaleFilter;
+import java.io.Serializable;
 import java.util.*;
-public class MetriqueControlleur {
+public class MetriqueControlleur implements Serializable {
 
     //Pr: Poids du recyclage
     //Pc: Poids du compostage
@@ -27,8 +28,7 @@ public class MetriqueControlleur {
     //un tableau de dimension 3 contenant l'usage des trois categorie de composte
     //private ArrayList<Besoin> besoins;
 
-
-    private ArrayList<Metrique> metriques;
+    private int scoreEcono;
     public void ParticipC(ArrayList<Double> tNc,ArrayList<Double> Ec){
         double Uc=calculeUc(tNc,Ec);
         System.out.println("niveau de participation au composte="+Uc);
@@ -45,6 +45,10 @@ public class MetriqueControlleur {
         double Nc3=tNc.get(2);
         double Uc = (Nc1 * Ec1 + Nc2 * Ec2 + Nc3 * Ec3)/ Collections.max(Ec);
         return Uc;
+    }
+
+    public int getScoreEcono(){
+        return this.scoreEcono;
     }
 
 
@@ -93,7 +97,9 @@ public class MetriqueControlleur {
 
         double CN = (Nr * Cr + Nc * Cc + No * Co - CIM) / CIM;
         double score = 1 - Math.max (0, CN);
+        int scoree = (int) score;
         System.out.println("score econo="+score);
+        this.scoreEcono =scoree ;
     }
 
     //calculer la proportion de remplissage prend en parametre niveau de remplissage

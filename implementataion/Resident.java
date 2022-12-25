@@ -1,69 +1,62 @@
-
-
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Resident extends Compte{
+public class Resident extends Account implements Serializable {
 
+	private String lastName, firstName, email, telephone, address, password;
+	// compteconfirme en 3 jours? boolean
+	private ArrayList<Bin> registeredBins = new ArrayList<Bin>();
 
-    private int nombre_de_bac_enregistre;
-    private ArrayList<Bac> bacs;
-
-    public Resident(String account_numer, String password){
-        super(account_numer,password);
-        this.nombre_de_bac_enregistre = 0;
-        this.bacs = new ArrayList<Bac>();
-    }
-
-
-    public ArrayList<Bac> get_bacs() {
-        return bacs;
-    }
-
-    public void ajout_un_bac(Bac bac){
-        bacs.add(bac);
-    }
-
-    public void remove_bac(int numero){
-        bacs.remove(numero);
-    }
+	// 3 Metrics
+	private String CRTratio; // compost+reycle to trash ratio
+	private String accumulationRate; // rate of how fast bins get filled
+	private String ScoreEcono; // see metriques example
 
 
-    public void print_info_des_bac(){
 
-        if (bacs.size() == 0){
-            System.out.println("il semble que vous avez pas de bac :(");
-            return ;
-        }
-        System.out.println("Voila tous les bacs que vous avez");
-        for (int i = 0; i < bacs.size(); i++){
-            int j = i + 1;
-            System.out.print(j+", ");
-            bacs.get(i).print_info();
-        }
-    }
+	public Resident(String lastName, String firstName, String email, String telephone, String address, String password, Bin initialBin) {
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.email = email;
+		this.telephone = telephone;
+		this.address = address;
+		this.password = password;
+		this.registeredBins.add(initialBin);
+	}
 
-    public void print_etats_des_bacs(){
-        if (bacs.size() == 0){
-            System.out.println("il semble que vous avez pas de bac :(");
-        }
+	public void addBin(Bin bin) {
+		registeredBins.add(bin);
+	}
 
-        for (int i = 0; i < bacs.size(); i++){
-            int j = i + 1;
-            System.out.println("===========================================");
-            System.out.print(j+", ");
-            bacs.get(i).print_info();
-            bacs.get(i).print_etats();
-        }
-
-    }
-
-    public Boolean bacs_est_vide(){
-        if (bacs.size() >= 1){
-            return false;
-        }
-        else return true;
-    }
+	public void setLastName(String lastName) { this.lastName = lastName; }
+	public void setFirstName(String firstName) { this.firstName = firstName; }
+	public void setEmail(String email) { this.email = email; }
+	public void setTelephone(String telephone) { this.telephone = telephone; }
+	public void setAddress(String address) { this.address = address; }
+	public void setPassword(String password) { this.password = password; }
 
 
+
+	public ArrayList<Bin> getRegisteredBins() { return registeredBins; }
+	public String getEmail() { return email; }
+	public String getAddress() { return address; }
+	public String getPassword() { return password; }
+	public String getFirstName() { return firstName; }
+
+
+	public void updateCRTratio() {
+		// calculate with formula
+		// this.CRTratio =
+	}
+
+	public void updateAccumRate() {
+		// calculate with formula
+		// this.accumulationRate =
+	}
+
+	public void updateScoreEcono() {
+		// calculate with formula
+		// this.ScoreEcono =
+	}
 
 }
