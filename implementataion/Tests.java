@@ -9,7 +9,7 @@ public class Tests {
         @Test
         public void testAssertions(){
         /**
-         * first test for metrique
+         * first test for metrique of score econo
          */
         double Pr = 23.0;
         double Pc = 46.0;
@@ -28,6 +28,17 @@ public class Tests {
         MetriqueControlleur metriqueControlleur = new MetriqueControlleur();
         metriqueControlleur.consulter_les_metriques();
         assertEquals(-51, metriqueControlleur.getScoreEcono());
+
+        /**
+         * second test for metrique of score ecolo
+         */
+        assertEquals(0, metriqueControlleur.getScoreEcolo());
+
+        /**
+         * third test for metrique of  "a proportion de remplissage prend en parametre niveau de remplissage "
+         *
+         */
+        assertEquals(3, metriqueControlleur.getPnn());
 
         /**
          * second test for account
@@ -50,6 +61,11 @@ public class Tests {
         activity1.getAverageRating();
 
         assertEquals(300,(int)activity1.getAverageRating());
+
+        /**
+         * forth test for activity rating
+         */
+
 
     }
 
