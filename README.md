@@ -31,6 +31,13 @@ password : 888 <br>
 
 
 
+Pour les test,
+il y a 5 tests dans implementation/Tests.java
+et 3 test dans UniTest2.java
+assure que tu as librairie du Junit avant de les tester
+
+
+
 # 2255_devoir 20-nov-2022 <br />
 Bineco<br />
 ce projet consiste a implementé l'application Bineco qui permet:<br />
