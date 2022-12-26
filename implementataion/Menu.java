@@ -539,7 +539,7 @@ public class Menu implements Serializable {
 								ConsumerActivity chosenActivity = chosenConsumerActivities.get(activityChoice-1);
 								// todo: implement input verification
 								double rating = -1;
-								System.out.print("Enter a rating out of 5");
+								System.out.print("Enter a rating out of 5: ");
 								rating = Double.parseDouble(scanner.nextLine());
 								chosenActivity.addRating(rating);
 
