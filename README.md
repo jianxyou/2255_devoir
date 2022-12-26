@@ -1,8 +1,34 @@
 # 2255_devoir 25-dec-2022 <br />
+
 Comment rouler le programme <br />
 1. Compiler App.java : javac App.java <br />
 2. S'assurer que Menu.ser est present dans le même directory. Si non, il y a une copie dans le /savedata directory <br />
 3. Rouler le code : java App <br /><br />
+
+voici quelques comptes déjà enregistré dans le logiciel
+
+1, résident 1
+account : 111@umontreal.ca
+password: 888
+
+2, résident 2
+account : 222@umontreal.ca
+password: 888
+
+3, résident 3
+account : 333@umontreal.ca
+password: 888
+
+4, consommateur 1
+account : consummer111@umontreal.ca
+password : 888
+
+5, consommateur 2
+account : consummer222@umontreal.ca
+password : 888
+
+...
+
 
 
 # 2255_devoir 20-nov-2022 <br />
