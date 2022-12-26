@@ -1,22 +1,24 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/** 
+* Certaines fonctions ont dû être utilisées pour le refactoring du code source... 
+* run tests: java -ea UnitTests2
+* Tout les tests passent si aucun message d'erreur.
+*/
 public class UnitTests2 {
 
 	public static void main(String[] args) {
-	/* 
+	/* test ideas
 	jianxin: metrique, login (account, password), consumer rating
-	-verify qr code / bin register
+	-verify qr code / bin register 
 	-verify consumer code / cons register
-	-bin unregister
-	-consumer search
+	-bin unregister 
+	-consumer search 
 	-consumer activity rating
-	-consumer rating
 	-delete activity
 	-modify activity
 	*/
-
-		// run tests : java -ea UnitTests2
 
 	/////////////// consumerSearch() Test setup
 	String con1wasteTypes = "recycle, paper, glass";
@@ -106,12 +108,53 @@ public class UnitTests2 {
 	unregisterBin(resident1bins, 4);
 	assert (resident1bins.contains(testBin1) && resident1bins.contains(testBin2) && resident1bins.contains(testBin3));
 
+
+	/////////////// validateQRCode() test setup
+	ArrayList<Bin> existingBins = new ArrayList<>();
+	existingBins.add(new Bin("bin1code", "bin1address"));
+	existingBins.add(new Bin("bin2code", "bin2address"));
+	existingBins.add(new Bin("bin3code", null)); // address null because no resident registered this bin
+
+		// Test 1: code exists, but code/bin is used
+	assert (validateQRCode(existingBins, "bin1code") == false);
+		// Test 2: code exists, and bin is not associated with anyone
+	assert (validateQRCode(existingBins, "bin3code") == true);
+		// Test 3: code does not exist
+	assert (validateQRCode(existingBins, "bin4code") == false);
+
+
+	/////////////// calculateRating() test setup
+	ArrayList<ConsumerActivity> consumersActivities;
+
+		// Test 1
+	consumersActivities = new ArrayList<>();
+	consumersActivities.add(new ConsumerActivity(2));
+	consumersActivities.add(new ConsumerActivity(2));
+	assert (calculateRating(consumersActivities) == 2);
+
+		// Test 2
+	consumersActivities = new ArrayList<>();
+	consumersActivities.add(new ConsumerActivity(2));
+	consumersActivities.add(new ConsumerActivity(2));
+	consumersActivities.add(new ConsumerActivity(2));
+	assert (calculateRating(consumersActivities) == 2);
+
+		// Test 3
+	consumersActivities = new ArrayList<>();
+	consumersActivities.add(new ConsumerActivity(2));
+	consumersActivities.add(new ConsumerActivity(2));
+	consumersActivities.add(new ConsumerActivity(3.5));
+	assert (calculateRating(consumersActivities) == 2.5);
+
+
+
+
 	}
 
 
 	
 
-	// searchTerm must be one keyword, in preferabky singular / beginning of word which is the same in singular/plural form
+	// searchTerm must be one keyword, in preferably singular or beginning of word which is the same in singular/plural form
 	// search by name or waste type or activity
 	public static ArrayList<Consumer> consumerSearch(ArrayList<Consumer> allConsumers, String searchTerm) {
 		ArrayList<Consumer> searchResults = new ArrayList<>();
@@ -146,16 +189,31 @@ public class UnitTests2 {
 		registeredBins.remove(chosenBin);
 	}
 
-	// a validCode is a qr code existing in MunicipInfo's list of bin codes. // check if qrcode can be used for signup
-	// public static boolean validateQRCode(ArrayList<Bin> existingBins, String qrCode) {
-	// 	for (Bin existingBin : existingBins) {
-	// 		if (qrCode.equals(existingBin.getQRCode()) && )
-	// 	}
-	// }
+	// Check if qrcode can be registered to a resident. existingBins is MunicipInfo's bins.
+	// method should have been in MunicipInfo
+	public static boolean validateQRCode(ArrayList<Bin> existingBins, String qrCode) {
+		for (Bin existingBin : existingBins) {
+			if (qrCode.equals(existingBin.getQRCode()) && existingBin.getAddress() == null) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// calculate the consumer's rating
+	public static double calculateRating(ArrayList<ConsumerActivity> consumersActivities) {
+		double sum = 0;
+		double avg;
+		for (ConsumerActivity activity : consumersActivities) {
+			sum += activity.getAverageRating();
+		}
+		avg = sum / consumersActivities.size();
+		return avg;
+	}
 
 }
 
-/*
+/* reference code from Menu
 
 case 2: { // unregister a bin
 		 		System.out.println("=== REMOVE A BIN ===");
@@ -192,8 +250,6 @@ case 2: { // unregister a bin
 
 
 
-
-
 /*
 
 					if (consumerChoice == (searchResults.size()+1)) { // search functionality
@@ -224,5 +280,19 @@ case 2: { // unregister a bin
 							}
 						}
 
+
+*/
+
+/*
+public void updateRating() { 
+		double sum = 0;
+		double avg;
+		for (ConsumerActivity activity : activities) {
+			sum += activity.getAverageRating();
+		}
+		avg = sum / activities.size();
+
+		this.rating = avg;
+	}
 
 */

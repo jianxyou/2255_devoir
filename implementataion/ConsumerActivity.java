@@ -3,10 +3,13 @@ import java.io.Serializable;
 
 public class ConsumerActivity implements Serializable {
 
-	private String name; //? String description
+	private String name; 
 	private ArrayList<Double> ratings = new ArrayList<Double>();
 	private double averageRating;
 
+	public ConsumerActivity(double averageRating) { // testing purposes constructor
+		this.averageRating = averageRating;
+	}
 	public ConsumerActivity(String name) {
 		this.name = name;
 	}

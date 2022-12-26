@@ -18,6 +18,10 @@ public class Bin implements Serializable {
 	ArrayList<String> compositionHist = new ArrayList<String>(); //? prof said not need
 
 	public Bin() {} // testing purposes constructor
+	public Bin(String qrCode, String address) { // testing purposes constructor
+		this.qrCode = qrCode;
+		this.address = address;
+	}
 	public Bin(String qrCode, String name, String type, String address) {
 		this.qrCode = qrCode;
 		this.name = name;
@@ -38,6 +42,7 @@ public class Bin implements Serializable {
 	public String getQRCode() { return qrCode; }
 	public String getName() { return name; }
 	public String getType() { return type; }
+	public String getAddress() { return address; }
 	public double getFilledLevel() { return fillLevel; }
 	public String getComposition() { return currentComposition; }
 
