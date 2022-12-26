@@ -5,27 +5,27 @@ Comment rouler le programme <br />
 2. S'assurer que Menu.ser est present dans le même directory. Si non, il y a une copie dans le /savedata directory <br />
 3. Rouler le code : java App <br /><br />
 
-voici quelques comptes déjà enregistré dans le logiciel
+voici quelques comptes déjà enregistré dans le logiciel, vous pouvez directement login
 
-1, résident 1
-account : 111@umontreal.ca
-password: 888
+1, résident 1 <br>
+account : 111@umontreal.ca <br>
+password: 888 <br>
 
-2, résident 2
-account : 222@umontreal.ca
-password: 888
+2, résident 2 <br>
+account : 222@umontreal.ca <br>
+password: 888 <br>
 
-3, résident 3
-account : 333@umontreal.ca
-password: 888
+3, résident 3 <br>
+account : 333@umontreal.ca <br>
+password: 888 <br>
 
-4, consommateur 1
-account : consummer111@umontreal.ca
-password : 888
+4, consommateur 1 <br>
+account : consummer111@umontreal.ca <br>
+password : 888 <br>
 
-5, consommateur 2
-account : consummer222@umontreal.ca
-password : 888
+5, consommateur 2 <br>
+account : consummer222@umontreal.ca <br>
+password : 888 <br>
 
 ...
 
