@@ -34,6 +34,8 @@ public class MetriqueControlleur implements Serializable {
     //private ArrayList<Besoin> besoins;
 
     private int scoreEcono;
+    private int scoreEcolo;
+    private int pnn;
     public void ParticipC(ArrayList<Double> tNc,ArrayList<Double> Ec){
         double Uc=calculeUc(tNc,Ec);
         System.out.println("niveau de participation au composte="+Uc);
@@ -55,6 +57,7 @@ public class MetriqueControlleur implements Serializable {
     public int getScoreEcono(){
         return this.scoreEcono;
     }
+
 
 
 
@@ -94,8 +97,19 @@ public class MetriqueControlleur implements Serializable {
         double PNU = Math.log((PNr * Ur + PNc * Uc + 1) / (PNo + 1));
         double score =PNU/PNUI;
         System.out.println("score ecolo="+score);
+
+        int sco = (int) score;
+        this.scoreEcolo = sco;
     }
 
+    public int getScoreEcolo(){
+        return this.scoreEcolo;
+    }
+
+
+    public int getPnn(){
+        return this.pnn;
+    }
     //calcule de score Econo:
     // prend en parametre les couts le niveau de remplissages et le cout ideal
     public void scoreEcono(double Cr,double Cc, double Co,double Nc,double No,double Nr,double CIM ){
@@ -112,6 +126,9 @@ public class MetriqueControlleur implements Serializable {
         double PN= (PNr + PNc) / (PNo + 1)  ;
         System.out.println("proportion de de remplissage "
                 + "du compostage et du recyclage par rapport au ordure=  "+PN);
+
+        int pnn = (int) PN;
+        this.pnn = pnn;
     }
     //niveau d'erreur de recyclage prend en parametre niveau de remplissage de
     //recyclage et tableau de remplissage des categorie de recyclage
