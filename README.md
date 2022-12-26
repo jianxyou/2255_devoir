@@ -1,3 +1,10 @@
+# 2255_devoir 25-dec-2022 <br />
+Comment rouler le programme <br />
+1. Compiler App.java : javac App.java <br />
+2. S'assurer que Menu.ser est present dans le même directory. Si non, il y a une copie dans le /savedata directory <br />
+3. Rouler le code : java App <br /><br />
+
+
 # 2255_devoir 20-nov-2022 <br />
 Bineco<br />
 ce projet consiste a implementé l'application Bineco qui permet:<br />
