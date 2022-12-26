@@ -2,6 +2,11 @@
 import java.awt.image.AreaAveragingScaleFilter;
 import java.io.Serializable;
 import java.util.*;
+
+
+/**
+ * Cette classe controle la logique et les formules pour les metriques.
+*/
 public class MetriqueControlleur implements Serializable {
 
     //Pr: Poids du recyclage

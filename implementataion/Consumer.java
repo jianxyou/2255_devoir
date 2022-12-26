@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.io.Serializable;
 
+/**
+ * Cette classe represente un consommateur.
+*/
 public class Consumer extends Account implements Serializable {
 	
 	private String code, name, address, email, telephone, wasteTypes, password;
@@ -44,11 +47,17 @@ public class Consumer extends Account implements Serializable {
 	public void setProcessingCapacity(double processingCapacity) { this.processingCapacity = processingCapacity; }
 
 
+	/**
+ 	* Cette sert a ajouter une activite de consommateur.
+	*/
 	public void addActivity(ConsumerActivity activity) {
 		activities.add(activity);
 	}
 
-	public void updateRating() { // rating of Consumer = average of avg rating of each of activites //? add Consumer owner attribute to consumeractivity so activity can call this when activity gets a new rating
+	/**
+ 	* Cette fonction sert a calculer et mettre a jour la note du consommateur
+	*/
+	public void updateRating() { // rating of Consumer = average of avg rating of each of activites 
 		double sum = 0;
 		double avg;
 		for (ConsumerActivity activity : activities) {

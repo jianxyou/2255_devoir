@@ -3,7 +3,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
- * MunicipInfoService
+ * Cette classe est l'API du service de MunicipInfo.
  */
 public class MunicipInfo implements Serializable {
 
@@ -46,18 +46,27 @@ public class MunicipInfo implements Serializable {
 		String capacite;
 	}
 
-
+	/**
+	 * Cette fonction simule la verification de mot de passe.
+	 * 
+	 */
 	public Boolean verifyPassword(String account, String password1, String password2){
 		return password1 == password2;
 	}
 
 
-
+	/**
+	 * Cette fonction simule l'envoi de message.
+	 * 
+	 */
 	public void post_message(String message){
 		System.out.println(message);
 	}
 
-
+	/**
+	 * Cette fonction simule l'affiche de l'etat des lots de dechets municipaux.
+	 * 
+	 */
 	public void afficher_lots(){
 		var lots = new ArrayList<Lot>();
 
@@ -91,7 +100,10 @@ public class MunicipInfo implements Serializable {
 		afficher_lot(lot_3);
 
 	}
-
+	/**
+	 * Cette fonction simule l'affiche de l'etat de 1 lot de dechets.
+	 * 
+	 */
 	public void afficher_lot(Lot lot){
 		System.out.println("le state est " + ":" +  lot.state);
 		System.out.println("le date_livraison est " + ":" +  lot.date_livraison);

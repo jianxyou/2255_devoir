@@ -1,3 +1,7 @@
+
+/**
+ * Cette classe represente un lot de dechets municipal.
+*/
 public class Lot {
 
 
@@ -13,7 +17,7 @@ public class Lot {
         this.date_ramassage = date_ramassage;
     }
 
-
+    
     public String getNumber(){
 
         return this.number;

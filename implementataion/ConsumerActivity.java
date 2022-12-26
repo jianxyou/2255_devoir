@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.io.Serializable;
-
+/**
+ * Cette classe represente une activite maintenu par un consommateur.
+*/
 public class ConsumerActivity implements Serializable {
 
 	private String name; 

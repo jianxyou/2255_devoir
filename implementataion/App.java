@@ -1,6 +1,9 @@
 import java.io.*;
 //import java.io.File;
 
+/**
+ * Cette classe contient la main methode pour rouler l'application. Et la logique permettant la persistence des donnees.
+*/
 public class App {
 
 	private static Menu menu;
@@ -35,6 +38,9 @@ public class App {
 
 	}
 
+	/**
+ 	* Cette fonction permet de sauvegarder les changements faite par l'utilisateur a travers le menu.
+	*/
 	public static void serialize() throws IOException, FileNotFoundException, ClassNotFoundException {
 		FileOutputStream fileOut = new FileOutputStream("Menu.ser");
 		ObjectOutputStream out = new ObjectOutputStream(fileOut);
